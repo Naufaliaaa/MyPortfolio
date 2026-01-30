@@ -140,6 +140,69 @@ nav ul li a {
     color: var(--PrimaryTextColor);
 }
 
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--BorderColor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--PrimaryTextColor);
+}
+
+.dropdown-toggle:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1.5px solid var(--BorderColor);
+    border-radius: var(--ItemBorderRadius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    min-width: 180px;
+    padding: 0.5rem 0;
+    z-index: 100;
+    margin-top: 0.5rem;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--SecondaryTextColor);
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: var(--SecondaryBackgroundColor);
+    color: var(--PrimaryTextColor);
+}
+
 /* Burger */
 .burger div {
     width: 25px;
