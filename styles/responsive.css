@@ -20,45 +20,59 @@
         cursor: pointer;
     }
     
-    .toggle-burger .line-1 {
+    .toggle-burger .Line-1 {
         transform: rotate(-45deg) translate(-5px, 7px);
     }
     
-    .toggle-burger .line-2 {
+    .toggle-burger .Line-2 {
         opacity: 0;
     }
     
-    .toggle-burger .line-3 {
+    .toggle-burger .Line-3 {
         transform: rotate(45deg) translate(-5px, -7px);
     }
     
     /* Navigation */
     nav {
         position: fixed;
-        width: 50px;
+        width: 60%;
         right: 0;
         top: 0;
         height: 100vh;
-        flex-direction: column;
         background: var(--PrimaryBackgroundColor);
         border-left: 1px solid var(--BorderColor);
         z-index: 9;
         transform: translateX(100%);
-        transition: 0.2s ease-in-out;
+        transition: 0.3s ease-in-out;
         display: none;
+        padding-top: 80px;
     }
     
     nav ul {
-        height: 100vh;
+        height: auto;
+        min-height: 50vh;
         align-items: center;
         flex-direction: column;
+        justify-content: flex-start;
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+    
+    nav ul li {
+        width: 100%;
         justify-content: center;
+    }
+    
+    nav ul li a {
+        font-size: 1.1rem;
+        padding: 1rem;
     }
     
     .nav-active {
         transform: translateX(0);
-        width: 50%;
+        width: 60%;
         display: block;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
     
     :root {
