@@ -117,6 +117,8 @@ a {
     list-style: none;
     display: flex;
     gap: 3rem;
+    margin-left: auto;
+    padding-right: 2rem;
 }
 
 .logo {

@@ -68,6 +68,13 @@
         padding: 1rem;
     }
     
+    /* Dropdown di mobile - posisikan di paling bawah */
+    nav ul li.dropdown {
+        order: 99;
+        margin-top: auto;
+        padding-bottom: 3rem;
+    }
+    
     .nav-active {
         transform: translateX(0);
         width: 60%;
