@@ -68,40 +68,44 @@
         padding: 1rem;
     }
     
-    /* Dropdown di mobile - posisikan di paling bawah */
+    /* Dropdown di mobile - posisikan di paling bawah dan hilangkan dropdown */
     nav ul li.dropdown {
         order: 99;
         margin-top: auto;
         padding-bottom: 3rem;
     }
     
-    /* Dropdown Menu Mobile - stacked vertically */
+    /* Dropdown Menu Mobile - selalu visible dan stacked, tanpa dropdown */
+    .dropdown-toggle {
+        display: none;
+    }
+    
     .dropdown-menu {
         position: static;
         box-shadow: none;
         border: none;
-        background: var(--SecondaryBackgroundColor);
+        background: transparent;
         width: 100%;
         text-align: center;
-        margin-top: 0.5rem;
+        margin-top: 0;
         padding: 0;
         right: auto;
         transform: none;
-        display: none;
-    }
-    
-    .dropdown-menu.active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         opacity: 1;
-        transform: none;
     }
     
     .dropdown-menu li {
-        margin: 0.2rem 0;
+        margin: 0;
     }
     
     .dropdown-menu li a {
-        padding: 0.6rem 1rem;
+        padding: 0.8rem 1rem;
+        background: var(--PrimaryBackgroundColor);
+        border: 1.5px solid var(--BorderColor);
+        border-radius: var(--ItemBorderRadius);
     }
     
     .nav-active {
@@ -190,18 +194,6 @@
     
     .pre-title {
         font-size: .7rem;
-    }
-    
-    /* Dropdown Menu Mobile */
-    .dropdown {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .dropdown-toggle {
-        width: 100%;
-        justify-content: center;
-        padding: 0.8rem 1rem;
     }
 }
 
