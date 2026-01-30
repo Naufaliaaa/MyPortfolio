@@ -112,6 +112,16 @@
         flex-direction: column;
     }
     
+    .contact-left {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-right {
+        display: flex;
+        flex-direction: row;
+    }
+    
     .contact-form {
         width: 100%;
     }
@@ -170,22 +180,4 @@
         padding: 0.6rem 1rem;
     }
 }
-```
 
----
-
-**Cara menggunakan:**
-
-1. **Buat folder struktur seperti ini:**
-```
-portfolio/
-├── index.html
-├── styles/
-│   ├── style.css
-│   └── responsive.css
-├── scripts/
-│   └── main.js
-├── images/
-│   └── (semua gambar Anda)
-├── Creativ_Portfolio.pdf
-└── Naufal_resume.pdf
