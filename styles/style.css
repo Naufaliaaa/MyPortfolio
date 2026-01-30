@@ -181,8 +181,7 @@ nav ul li a {
     margin-top: 0.5rem;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown:active .dropdown-menu {
+.dropdown-menu.active {
     display: block;
 }
 
