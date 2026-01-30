@@ -1,158 +1,191 @@
-@media screen and (max-width : 1000px) {
+@media screen and (max-width: 1000px) {
     p {
         font-size: .9rem;
         line-height: 1.8rem;
     }
+    
     .grid-3 {
         gap: 1rem;
     }
+    
     .skills-right ul li {
         font-size: 0.9rem;
     }
 }
 
-@media screen and (max-width : 825px) {
+@media screen and (max-width: 825px) {
     /* Burger */
-    .burger { 
+    .burger {
         display: block;
         cursor: pointer;
     }
-
+    
     .toggle-burger .line-1 {
         transform: rotate(-45deg) translate(-5px, 7px);
     }
-
+    
     .toggle-burger .line-2 {
         opacity: 0;
     }
-
-    .toggle-burger.line-3 {
-        transform: rotate(45deg) translate(-5px -7px);
+    
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px);
     }
-
+    
     /* Navigation */
     nav {
         position: fixed;
         width: 50px;
         right: 0;
         top: 0;
-        height:100vh;
+        height: 100vh;
         flex-direction: column;
         background: var(--PrimaryBackgroundColor);
-        border-left: 1px solid var(--borderColor);
+        border-left: 1px solid var(--BorderColor);
         z-index: 9;
         transform: translateX(100%);
         transition: 0.2s ease-in-out;
         display: none;
     }
-
+    
     nav ul {
         height: 100vh;
         align-items: center;
         flex-direction: column;
         justify-content: center;
     }
-
+    
     .nav-active {
         transform: translateX(0);
         width: 50%;
         display: block;
     }
-
+    
     :root {
-        --sectionPaddinhg: 4rem 0;
+        --SectionPadding: 4rem 0;
     }
-
+    
     .section-title {
         font-size: 1.6rem;
         margin: .6rem 0 2.5rem;
     }
-
+    
     .pre-title {
         font-size: .8rem;
     }
-
+    
     /* Hero Section */
-    #hero{
-    grid-template-columns: 1fr;
-    height: fit-content;
+    #hero {
+        grid-template-columns: 1fr;
+        height: fit-content;
     }
-
-    .hero-right {
+    
+    .hero-reight {
         order: -1;
     }
-
-    .hero-right img {
+    
+    .hero-reight img {
         width: 70%;
     }
-
+    
     .hero-left {
         text-align: center;
         padding-bottom: 5rem;
     }
-
+    
     .hero-left .pre-title {
         margin: 0 auto;
     }
-
+    
     .hero-name {
         font-size: 2.3rem;
         margin-bottom: .5rem;
     }
-
+    
     /* Skills Section */
     .skills-grid {
         gap: 1rem;
     }
-
+    
+    /* Contact Section */
+    .box-contact {
+        flex-direction: column;
+    }
+    
+    .contact-form {
+        width: 100%;
+    }
+    
     /* Footer Section */
     footer {
         padding: 2rem;
     }
+}
 
-    .box-contact {
-        flex-direction: column;
+@media screen and (max-width: 640px) {
+    /* Titles */
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .pre-title {
+        font-size: .7rem;
+    }
+    
+    /* Dropdown Menu Mobile */
+    .dropdown {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1rem;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background: var(--SecondaryBackgroundColor);
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+        padding: 0;
+        right: auto;
+        transform: none;
+    }
+    
+    .dropdown-menu.active {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .dropdown-menu li {
+        margin: 0.2rem 0;
+    }
+    
+    .dropdown-menu li a {
+        padding: 0.6rem 1rem;
     }
 }
+```
 
-@media screen and (max-width : 640px) {
-       /* Titles */
-       .section-title{
-        font-size: 1.3rem;
-       }
+---
 
-       .pre-title{
-        font-size: .7rem;
-       }
+**Cara menggunakan:**
 
-       /* Dropdown Menu Mobile */
-       .dropdown {
-           width: 100%;
-           justify-content: center;
-       }
-
-       .dropdown-toggle {
-           width: 100%;
-           justify-content: center;
-           padding: 0.8rem 1rem;
-       }
-
-       .dropdown-menu {
-           position: static;
-           box-shadow: none;
-           border: none;
-           background: var(--SecondaryBackgroundColor);
-           width: 100%;
-           text-align: center;
-           margin-top: 0.5rem;
-           padding: 0;
-       }
-
-       .dropdown-menu li {
-           margin: 0.2rem 0;
-       }
-
-       .dropdown-menu li a {
-           padding: 0.6rem 1rem;
-       }
-}
+1. **Buat folder struktur seperti ini:**
+```
+portfolio/
+├── index.html
+├── styles/
+│   ├── style.css
+│   └── responsive.css
+├── scripts/
+│   └── main.js
+├── images/
+│   └── (semua gambar Anda)
+├── Creativ_Portfolio.pdf
+└── Naufal_resume.pdf

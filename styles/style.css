@@ -97,7 +97,6 @@ a {
 
 .btn:hover {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    gap: 3rem;
 }
 
 /* Layout */
@@ -179,10 +178,15 @@ nav ul li a {
     padding: 0.5rem 0;
     z-index: 100;
     margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .dropdown-menu.active {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown-menu li {
@@ -261,7 +265,7 @@ nav ul li a {
     text-align: center;
 }
 
-.services {
+.service {
     padding: 3rem 2rem;
     text-align: center;
     background: var(--PrimaryBackgroundColor);
@@ -373,7 +377,6 @@ nav ul li a {
 }
 
 /* The dot on the line */
-
 .education .line div::before {
     content: "";
     width: 15px;
@@ -405,16 +408,18 @@ nav ul li a {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
 }
-.box-contact{
+
+.box-contact {
     display: flex;
     justify-content: space-between;
 }
-.contact-left{
+
+.contact-left {
     display: flex;
     flex-direction: row;
 }
 
-.contact-right{
+.contact-right {
     flex-direction: row;
 }
 
@@ -434,15 +439,15 @@ nav ul li a {
     resize: none;
 }
 
-.contact-form input ::placeholder,
- .contact-form textarea ::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
     color: #9d9fa1;
-} 
+}
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border: 1px solid #7d7d7d
+    border: 1px solid #7d7d7d;
 }
 
 .btn-submit {
@@ -457,7 +462,7 @@ nav ul li a {
 }
 
 .btn-submit:hover {
-    background: var(--PrimaryIconColor);
+    background: var(--PrimaryIconColorHover);
 }
 
 .contact-item {
@@ -476,16 +481,15 @@ nav ul li a {
     align-items: center;
 }
 
-.contact-item-icon {
-    fill: var(--PrimaryIconColor)
+.contact-item-icon svg {
+    fill: var(--PrimaryIconColor);
 }
 
 .contact-item-detail h4 {
-    margin-bottom: 0.6rem ;
+    margin-bottom: 0.6rem;
 }
 
-/* Foooter Section*/
-
+/* Footer Section */
 #footer {
     padding: 4rem 0;
     background: var(--SecondaryBackgroundColor);
@@ -495,7 +499,7 @@ nav ul li a {
 .footer-icons {
     margin-bottom: 1rem;
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
+    justify-content: center;
 }
 
 .footer-icons a {
