@@ -506,12 +506,29 @@ nav ul li a {
 
 .footer-icons a {
     margin: 0 .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--BorderColor);
+    transition: all 0.3s ease-in-out;
 }
 
 .footer-icons svg {
     fill: #3e3f40;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-icons a:hover {
+    background: var(--PrimaryIconColor);
+    border-color: var(--PrimaryIconColor);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(126, 116, 241, 0.3);
 }
 
 .footer-icons a:hover svg {
-    fill: #000;
+    fill: #fff;
 }
